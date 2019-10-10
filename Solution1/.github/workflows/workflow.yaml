@@ -1,0 +1,16 @@
+name: Workflow Testing
+
+on: [push]
+
+jobs:
+  build:
+    name: Test
+    runs-on:  ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+      - name: build
+        run: |
+          dotnet build ./Solution1/
+          
+    
